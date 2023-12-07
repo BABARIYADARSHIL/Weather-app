@@ -11,6 +11,7 @@ async function checkWether(city){
    if(response.status == 404){
     document.querySelector(".error").style.display = "block";
     document.querySelector(".weather").style.display = "none";
+   setTimeout(() =>{document.location.reload();},3000); 
    }else{
 
     var data = await response.json();
@@ -40,6 +41,7 @@ async function checkWether(city){
 
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".erroe").style.display = "none";
+    
 }
 
     
